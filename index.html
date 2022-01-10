@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div>
+    <h1>page for test :) from 1 to 12</h1>
+</div>
+<script>
+
+    var data = '[ {"id":1, "title" : "hello"}, {"id":2, "title" : "helloow"} ]';
+    eval("var ar =" + data + ";");
+    console.log(ar[0].title);
+    var dataparse = JSON.parse(data);
+    console.log(dataparse[1].title);
+
+    var data2 = { id: 3, title: 'makeparse' };
+    var json = JSON.stringify(data2);
+    console.log(json);
+    var dataparse2 = JSON.parse(json);
+    console.log(dataparse2.title);
+
+    var x = new Number(3);
+    var y = new Number(3);
+
+    console.log(x == y);
+    document.write(x === y);
+    document.write(typeof (3 + "4"));
+
+</script>
+
+<div>
+    <h1>page for test :) from 13 to </h1>
+</div>
+<script>
+    var arr = ["h1", "h2", "h3", "h4"];
+    for(var i=0;i<arr.length; i++)
+    document.write(arr[i]);
+
+    document.write("<br/>");
+
+    for(var d in arr)
+    document.write(d+"<br/>"); 
+    var ob = {id:1, name:'lee', weapon:'sword'};
+    for(var d in ob)
+    document.write(d+"<br/>");
+
+    var myowntest = '{"id":1, "name":"lee", "weapon":"bow"}';
+    var reparsedata = JSON.parse(myowntest);
+    document.write(reparsedata.id);
+
+</script>
+
+</body>
+</html>
